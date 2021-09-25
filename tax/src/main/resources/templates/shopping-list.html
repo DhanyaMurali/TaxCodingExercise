@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Shopping List</title>
+
+</head>
+
+<body>
+<h3>Shopping List</h3>
+<hr>
+
+<table border="1">
+	<thead>
+	<tr>
+		<th>ItemName</th>
+		<th>category</th>
+		<th>Imported</th>
+		<th>Price</th>
+		<th>Quantity</th>
+	
+	</tr>
+	
+	</thead>
+	<tbody>
+		<tr th:each="tempReceipt : ${shoppinglist}">
+			<td th:text="${tempReceipt.itemName}"/>
+			<td th:text="${tempReceipt.category}"/>
+			<td th:text="${tempReceipt.imported}"/>
+			<td th:text="${tempReceipt.price}"/>
+			<td th:text="${tempReceipt.quantity}"/>
+		</tr>
+
+	</tbody>
+
+
+
+
+</table>
+
+
+</body>
+
+</html>
