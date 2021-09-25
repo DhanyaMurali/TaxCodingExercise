@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Enter Items</title>
+
+</head>
+
+<body>
+<h3>Enter purchase item</h3>
+<hr>
+
+<form action="#" th:action="@{/tax/save}"
+				 th:object="${item}" method="POST">
+	Item Name
+	<input type="text" th:field="*{itemName}" placeholder="Item Name" name="ItemName"/>
+	<br>
+	<br>
+	Category
+	<select th:field="*{category}">
+    <option th:value="'Books'" th:text="Books"></option>
+    <option th:value="'Food'" th:text="Food"></option>
+    <option th:value="'Medical'" th:text="Medical"></option>
+	</select>
+	
+	<br>
+	<br>
+	Imported
+	<select th:field="*{imported}">
+    <option th:value="'Yes'" th:text="Yes"></option>
+    <option th:value="'No'" th:text="No"></option>
+    
+	</select>
+	
+	<br>
+	<br>
+	Price
+	<input type="text" th:field="*{price}" placeholder="Price"/>
+	<br>
+	<br>
+	Quantity
+	<input type="text" th:field="*{quantity}" placeholder="Quantity"/>
+	<br>
+	<br>
+	<button type="submit">Add Item</button>
+
+</form>
+	
+<hr>
+<a th:href="@{/tax/shoppinglist}">Show Items</a>
+</body>
+
+</html>
