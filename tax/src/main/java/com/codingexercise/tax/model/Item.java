@@ -4,7 +4,7 @@ public class Item {
 	
 	private String itemName;
 	private String category;
-	private boolean imported;
+	private String imported;
 	private double price;
 	private int quantity;
 	
@@ -12,7 +12,7 @@ public class Item {
 		
 	}
 
-	public Item(String itemName, String category, boolean imported, double price, int quantity) {
+	public Item(String itemName, String category, String imported, double price, int quantity) {
 		super();
 		this.itemName = itemName;
 		this.category = category;
@@ -37,11 +37,13 @@ public class Item {
 		this.category = category;
 	}
 
-	public boolean isImported() {
+	
+
+	public String getImported() {
 		return imported;
 	}
 
-	public void setImported(boolean imported) {
+	public void setImported(String imported) {
 		this.imported = imported;
 	}
 
