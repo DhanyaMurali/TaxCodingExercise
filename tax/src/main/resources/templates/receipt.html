@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Receipt</title>
+
+</head>
+
+<body>
+<h3>Receipt</h3>
+<hr>
+<table border="1">
+	<thead>
+	<tr>
+		<th>ItemName</th>
+		<th>Quantity</th>
+		<th>Imported</th>
+		<th>Price</th>
+		
+	
+	</tr>
+	
+	</thead>
+	<tbody>
+		<tr th:each="tempReceipt : ${receipt}">
+			<td th:text="${tempReceipt.itemName}"/>
+			<td th:text="${tempReceipt.quantity}"/>
+			<td th:text="${tempReceipt.imported}"/>
+			<td th:text="${tempReceipt.price}"/>
+			
+		</tr>
+		
+	</tbody>
+
+</table>
+<br>
+
+Sales Tax :<span th:text="${totalSalesTax}"></span>
+<br>
+<br>
+Total Cost :<span th:text="${totalCost}"></span>
+<br>
+<br>
+<a th:href="@{/tax/newCustomer}">New Customer</a>
+</body>
+
+</html>
