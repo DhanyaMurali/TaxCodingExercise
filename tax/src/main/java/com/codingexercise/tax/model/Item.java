@@ -1,11 +1,28 @@
 package com.codingexercise.tax.model;
 
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 public class Item {
 	
+	@NotNull(message = "Please enter item name")
+    @NotEmpty(message = "Please enter item name")
 	private String itemName;
+	
+	@NotNull
 	private String category;
+	
+	@NotNull
 	private String imported;
+	
+	@NotNull(message = "Item Price cannot be null!!")
+	@DecimalMin(value = "0.01",message="Item Price should be greater than or equal to 0.1")
 	private double price;
+	
+	@NotNull(message = "Quantity cannot be null!!")
+	@Min(value = 1,message = "Quantity should be greater than or equal to 1" )
 	private int quantity;
 	
 	public Item() {

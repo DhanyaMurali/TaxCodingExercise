@@ -4,14 +4,14 @@ public class Receipt {
 	
 	private String itemName;
 	private String imported;
-	private double price;
+	private String price;
 	private int quantity;
 	
 	public Receipt() {
 		
 	}
 
-	public Receipt(String itemName, String imported, double price, int quantity
+	public Receipt(String itemName, String imported, String price, int quantity
 			) {
 		super();
 		this.itemName = itemName;
@@ -37,11 +37,11 @@ public class Receipt {
 		this.imported = imported;
 	}
 
-	public double getPrice() {
+	public String getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 

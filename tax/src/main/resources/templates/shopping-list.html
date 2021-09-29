@@ -1,15 +1,21 @@
 <!DOCTYPE HTML>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 <title>Shopping List</title>
 
 </head>
 
 <body>
+<div class="container">
 <h3>Shopping List</h3>
-<hr>
 
-<table border="1">
+<table class="table table-bordered table-hover">
 	<thead>
 	<tr>
 		<th>ItemName</th>
@@ -36,14 +42,16 @@
 
 
 </table>
-<hr>
 
 <br> 
 <br>
-<a th:href="@{/tax/showFormForAdd}">Add more Items</a>
+<a th:href="@{/tax/showFormForAdd}"
+class="btn btn-primary btn-sm mb-3">Add more Items</a>
 <br>
 <br>
-<a th:href="@{/tax/receipt}">Checkout/View Bill</a>
+<a th:href="@{/tax/receipt}"
+class="btn btn-success btn-sm mb-3">Checkout/View Bill</a>
+</div>
 </body>
 
 </html>
